@@ -172,18 +172,6 @@ fi
 if [[ $1 -eq 2 ]]
 then
     echo "configure node2"
-    cp /vagrant/node2/* /etc/kubernetes/
-
-    systemctl daemon-reload
-    systemctl enable kubelet
-    systemctl start kubelet
-    systemctl enable kube-proxy
-    systemctl start kube-proxy
-fi
-
-if [[ $1 -eq 3 ]]
-then
-    echo "configure node3"
     cp /vagrant/node3/* /etc/kubernetes/
 
     systemctl daemon-reload
